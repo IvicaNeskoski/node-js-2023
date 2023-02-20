@@ -124,3 +124,17 @@ ucenik1.ocenka > ucenik3.ocenka
   : ucenik1.ocenka < ucenik3.ocenka
   ? console.log("asd")
   : console.log(asd);
+//
+
+const niza1 = ["book1", "book2", "book3"];
+
+for (let i = 0; i < niza1.length; i++) {
+  console.log(niza1[i]);
+}
+
+let c = 0;
+console.log(c);
+c++;
+console.log(c);
+console.log(c++);
+console.log(++c);
