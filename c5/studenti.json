@@ -1,0 +1,32 @@
+[
+  {
+    "ime": "John Doe",
+    "grad": "New York",
+    "prosek": 8.9
+  },
+  {
+    "ime": "Bella Doe",
+    "grad": "New York",
+    "prosek": 9.0
+  },
+  {
+    "ime": "Brian Higings",
+    "grad": "Orlando",
+    "prosek": 7.0
+  },
+  {
+    "ime": "Harry Potter",
+    "grad": "Los Angeles",
+    "prosek": 8.0
+  },
+  {
+    "ime": "Jhoney Deep",
+    "grad": "Boston",
+    "prosek": 10.0
+  },
+  {
+    "ime": "Claudia Peters",
+    "grad": "San Francisco",
+    "prosek": 9.5
+  }
+]

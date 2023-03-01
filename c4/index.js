@@ -24,14 +24,14 @@
 const fs = require("fs");
 const path = require("path");
 
-// const fileWrite = (filename, data) => {
-//   return new Promise((success, fail) => {
-//     fs.writeFile(filename, data, (err) => {
-//       if (err) return fail(err);
-//       return success();
-//     });
-//   });
-// };
+const fileWrite = (filename, data) => {
+  return new Promise((success, fail) => {
+    fs.writeFile(filename, data, (err) => {
+      if (err) return fail(err);
+      return success();
+    });
+  });
+};
 
 // fileWrite(path.join(__dirname, "test", "osenki.txt"), "4, 5 , 3, 2, 1, 5")
 //   .then(() => {
@@ -63,21 +63,43 @@ const fileRead = (filename) => {
   });
 };
 
-fileRead(path.join(__dirname, "test, boi2.txt"))
-  .then((data) => {
-    console.log("PROMISE RESOLVED");
-    console.log(data);
-  })
-  .catch((err) => {
-    console.log("PROMISES REJECTED");
-    console.log(err);
-  });
+// fileRead(path.join(__dirname, "test, boi2.txt"))
+//   .then((data) => {
+//     console.log("PROMISE RESOLVED");
+//     console.log(data);
+//   })
+//   .catch((err) => {
+//     console.log("PROMISES REJECTED");
+//     console.log(err);
+//   });
 
+// (async () => {
+//   try {
+//     let ocenki = await fileRead(path.join(__dirname, "test", "ocenki.txt"));
+//     console.log("ocenki", ocenki);
+//   } catch (err) {
+//     console.log(err);
+//   }
+// })();
+
+let imenik = [
+  { ime: "Zlate Zlatevski", telefon: 4564564 },
+  { ime: "Pero Perovski", telefon: 4564562 },
+  { ime: "Marko Markovski", telefon: 4564563 },
+];
 (async () => {
   try {
-    let ocenki = await fileRead(path.join(__dirname, "test", "ocenki.txt"));
-    console.log("ocenki", ocenki);
+    let imenikData = JSON.stringify(imenik); // convert object to string
+    console.log(imenikData);
+    await fileWrite(path.join(__dirname, "test1", "imenik.txt"), imenikData);
+    let dataString = await fileRead(
+      path.join(__dirname, "test1", "imenik.txt")
+    );
+    let data = JSON.parse(dataString); // convert string to object
+    console.log(data);
   } catch (err) {
     console.log(err);
   }
 })();
+
+//da se prekopira cel code
