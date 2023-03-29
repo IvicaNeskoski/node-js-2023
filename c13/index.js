@@ -19,7 +19,7 @@ app.get('/form_add_post', pages.formAdd)
 app.get('/form_edit_post/:id', pages.formEdit)
 
 app.post('/post/add', callbacks.create);
-app.put('/post/edit/:id', callbacks.update);
+app.post('/post/edit/:id', callbacks.update);
 app.delete('/post/delete/:id', callbacks.remove);
 
 app.listen(8080, err => {
