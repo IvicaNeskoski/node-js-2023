@@ -1,8 +1,8 @@
-
+require('dotenv').config();
 const express = require('express');
 const auth = require('./handlers/auth');
+const { expressjwt: jwt } = require('express-jwt');
 const db = require('./pkg/db');
-const { express = jwt}
 
 db.init();
 
